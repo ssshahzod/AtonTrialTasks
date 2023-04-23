@@ -1,5 +1,5 @@
 package org.atonInternship.DataStructure;
-
+import java.util.HashMap;
 public class TaskTreeNode<K> extends TreeNode<K>{
 
     private TreeNode<?> link = null;
