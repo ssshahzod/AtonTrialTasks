@@ -25,15 +25,18 @@ public class MyHashTableTest {
         TaskTreeNode<String> node2 = new TaskTreeNode<>("world");
 
         Assertions.assertEquals(0, table.insert("hello", node1));
-        Assertions.assertEquals(1, table.insert("world", node2));
+        Assertions.assertEquals(0, table.insert("world", node2));
     }
 
     @Test
     void testDelete() {
         TaskTreeNode<String> node1 = new TaskTreeNode<>("hello");
+        TaskTreeNode<String> node2 = new TaskTreeNode<>("world");
         table.insert("hello", node1);
+        table.insert("world", node2);
         table.delete("hello");
 
+        Assertions.assertEquals(node2, table.find("world"));
         Assertions.assertThrows(Exception.class, () -> table.find("hello"));
     }
 

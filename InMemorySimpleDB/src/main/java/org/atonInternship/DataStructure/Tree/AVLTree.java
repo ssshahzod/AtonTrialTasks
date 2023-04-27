@@ -85,12 +85,10 @@ public class AVLTree<K> implements TreeInterface<K> {
             return insertNode;
         }
         else if(comparator.compare(rootNode.getValue(), insertNode.getValue()) > 0){
-            var tmp = rootNode.getLeft();
-            tmp = innerInsert(rootNode.getLeft(), insertNode);
+            rootNode.setLeft(innerInsert(rootNode.getLeft(), insertNode));
         }
         else if(comparator.compare(rootNode.getValue(), insertNode.getValue()) < 0){
-            var tmp = rootNode.getRight();
-            tmp = innerInsert(rootNode.getRight(), insertNode);
+            rootNode.setRight(innerInsert(rootNode.getRight(), insertNode));
         } else{
             return null;
         }
@@ -122,11 +120,9 @@ public class AVLTree<K> implements TreeInterface<K> {
         if(node == null){
             return null;
         } else if(comparator.compare(node.getValue(), key) < 0){
-            var tmp = node.getRight();
-            tmp = delete(node.getRight(), key);
+            node.setRight(delete(node.getRight(), key));
         } else if(comparator.compare(node.getValue(), key) > 0){
-            var tmp = node.getLeft();
-            tmp = delete(node.getLeft(), key);
+            node.setLeft(delete(node.getLeft(), key));
         } else{
             if(node.getLeft() == null || node.getRight() == null)
                 node = (node.getLeft() == null) ? node.getRight() : node.getLeft();
@@ -134,8 +130,7 @@ public class AVLTree<K> implements TreeInterface<K> {
                 TreeNode<K> mostLeftChild = mostLeftChild(node.getRight());
                 node.setValue(mostLeftChild.getValue());
                 node.setLink(mostLeftChild.getLink());
-                var tmp = node.getRight();
-                tmp = delete(node.getRight(), node.getValue());
+                node.setRight(delete(node.getRight(), node.getValue()));
             }
         }
         if(node != null)

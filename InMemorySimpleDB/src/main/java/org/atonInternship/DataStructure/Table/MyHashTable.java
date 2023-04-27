@@ -1,6 +1,7 @@
 package org.atonInternship.DataStructure.Table;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
 import org.atonInternship.DataStructure.Tree.AVLTree;
@@ -9,7 +10,7 @@ import org.atonInternship.Exceptions.KeyNotFoundException;
 
 public class MyHashTable<K, V extends TreeNode<K>> implements MyHashTableInterface<K, V>{
     private int defaultSize = 20;
-    private final ArrayList<AVLTree<K>> data = new ArrayList<>(defaultSize);
+    private final ArrayList<AVLTree<K>> data = new ArrayList<>(Collections.nCopies(defaultSize, null));
     private final Comparator<K> comparator;
     private int capacity = 0;
 
@@ -56,6 +57,7 @@ public class MyHashTable<K, V extends TreeNode<K>> implements MyHashTableInterfa
     public V find(final K key) {
         AVLTree<K> tree = data.get(hash(key));
         if(tree != null){
+            //TODO: find a way to safely remove suppresswarning
             @SuppressWarnings("unchecked") V node = (V) tree.find(key);
 
             if(node != null && node.getValue().equals(key)){
