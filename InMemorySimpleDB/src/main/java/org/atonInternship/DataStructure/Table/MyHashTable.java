@@ -36,7 +36,7 @@ public class MyHashTable<K, V extends TreeNode<K>> implements MyHashTableInterfa
 
     @Override
     public int hash(final K key) {
-        return key.hashCode() % data.size();
+        return key.hashCode() % defaultSize;
     }
 
     @Override
