@@ -1,6 +1,8 @@
 package org.atonInternship.DataStructure.Tree;
 
-public interface RecursiveTree<K> {
+import org.atonInternship.DataStructure.Tree.Node.TreeNode;
+
+public interface TreeInterface<K> {
 
     TreeNode<K> getRoot();
     int insert(TreeNode<K> insertNode);

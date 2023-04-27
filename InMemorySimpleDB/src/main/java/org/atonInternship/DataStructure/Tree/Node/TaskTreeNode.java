@@ -1,12 +1,14 @@
-package org.atonInternship.DataStructure.Tree;
+package org.atonInternship.DataStructure.Tree.Node;
 
-public class TaskTreeNode<K> implements TreeNode<K>{
+import org.atonInternship.DataStructure.Tree.Node.TreeNode;
+
+public class TaskTreeNode<K> implements TreeNode<K> {
     private K value;
     private int height = 0;
 
     protected TreeNode<K> left = null;
     protected TreeNode<K> right = null;
-    private TreeNode<K> link = null;
+    private TreeNode<?> link = null;
 
     public TaskTreeNode(K value, TreeNode<K> left, TreeNode<K> right, TreeNode<K> link){
         this.left = left;
@@ -14,6 +16,7 @@ public class TaskTreeNode<K> implements TreeNode<K>{
         this.value = value;
         this.link = link;
     }
+
 
     public void setValue(final K value) {
         this.value = value;
@@ -52,10 +55,10 @@ public class TaskTreeNode<K> implements TreeNode<K>{
         return right;
     }
 
-    public TreeNode<K> getLink() {
+    public TreeNode<?> getLink() {
         return link;
     }
-    public void setLink(final TreeNode<K> link) {
+    public void setLink(final TreeNode<?> link) {
         this.link = link;
     }
     public TaskTreeNode(K value){

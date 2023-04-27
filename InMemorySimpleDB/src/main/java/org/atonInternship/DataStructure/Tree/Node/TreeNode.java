@@ -1,12 +1,9 @@
-package org.atonInternship.DataStructure.Tree;
-
-import com.sun.source.tree.Tree;
+package org.atonInternship.DataStructure.Tree.Node;
 
 public interface TreeNode<K> {
     //how to make it in different way???
-    void setLink(TreeNode<K> link);
-    TreeNode<K> getLink();
-
+    void setLink(TreeNode<?> link);
+    TreeNode<?> getLink();
 
 
     void setValue(K value);

@@ -1,26 +1,41 @@
 package org.atonInternship.Object;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
+
 public class SimpleDBObject implements DBObject {
     private Long account;
     private String name;
     private Double value;
+
+    public SimpleDBObject(){}
+    public SimpleDBObject(Long account, String name, Double value){
+        this.account = account;
+        this.name = name;
+        this.value = value;
+    }
+    public Long getAccount() {
+        return account;
+    }
+    public void setAccount(final Long account) {
+        this.account = account;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(final String name) {
+        this.name = name;
+    }
+    public Double getValue() {
+        return value;
+    }
+    public void setValue(final Double value) {
+        this.value = value;
+    }
 
     @Override
     public void readData(InputStream inputStream){
@@ -39,5 +54,12 @@ public class SimpleDBObject implements DBObject {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public String toString(){
+        return "Account: " + account.toString()
+                + "\nName: " + name + "\nValue: "
+                + value.toString() + "\n";
     }
 }

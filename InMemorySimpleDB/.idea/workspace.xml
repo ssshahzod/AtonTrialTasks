@@ -5,19 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75cd5d2d-5d06-4d64-bb93-60f71de0b68e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Table/MyHashTableInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/RecursiveTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/AVLTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/TaskTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/TaskTreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Table/MyHashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Table/MyHashTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/AVLTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/RecursiveTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/TreeInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/TaskTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/Node/TaskTreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/Node/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/Object/SimpleDBObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/Object/SimpleDBObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/Server/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/Server/DB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/Server/SimpleDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/Server/SimpleDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/atonInternship/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/atonInternship/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/atonInternship/Object/DBObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/atonInternship/Object/DBObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/atonInternship/Object/SimpleDBObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/atonInternship/Object/SimpleDBObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/atonInternship/DataStructure/Tree/AVLTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/atonInternship/DataStructure/Tree/AVLTreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/atonInternship/DataStructure/Tree/TaskRecursiveTreeNodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/atonInternship/DataStructure/Tree/TaskTreeInterfaceNodeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/atonInternship/DataStructure/Table/MyHashTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/atonInternship/DataStructure/Table/MyHashTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/atonInternship/DataStructure/Tree/AVLTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/atonInternship/DataStructure/Tree/AVLTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/atonInternship/DataStructure/Tree/RecursiveTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/atonInternship/DataStructure/Tree/TaskTreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/atonInternship/DataStructure/Tree/TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/atonInternship/Server/DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/atonInternship/Server/DB.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/atonInternship/Server/SimpleDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/atonInternship/Server/SimpleDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/atonInternship/DataStructure/Tree/AVLTreeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/atonInternship/DataStructure/Tree/AVLTreeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/atonInternship/DataStructure/Tree/TaskRecursiveTreeNodeTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,15 +33,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="3034" />
+    <option name="totalTimeSeconds" value="1762" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -74,6 +82,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.atonInternship.DataStructure.Table" />
       <recent name="org.atonInternship.DataStructure.Tree" />
     </key>
   </component>
@@ -82,7 +91,7 @@
       <module name="InMemorySimpleDB" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.atonInternship.DataStructure.Tree.*" />
+          <option name="PATTERN" value="org.atonInternship.DataStructure.Tree.Node.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,16 +102,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TaskRecursiveTreeNodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TaskTreeInterfaceNodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InMemorySimpleDB" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.atonInternship.DataStructure.Tree.*" />
+          <option name="PATTERN" value="org.atonInternship.DataStructure.Tree.Node.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.atonInternship.DataStructure.Tree" />
-      <option name="MAIN_CLASS_NAME" value="org.atonInternship.DataStructure.Tree.TaskRecursiveTreeNodeTest" />
+      <option name="MAIN_CLASS_NAME" value="org.atonInternship.DataStructure.Tree.TaskTreeInterfaceNodeTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -111,7 +120,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AVLTreeTest" />
-        <item itemvalue="JUnit.TaskRecursiveTreeNodeTest" />
+        <item itemvalue="JUnit.TaskTreeInterfaceNodeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -134,7 +143,8 @@
       <workItem from="1682187786136" duration="5638000" />
       <workItem from="1682249201787" duration="19000" />
       <workItem from="1682349474087" duration="6156000" />
-      <workItem from="1682420217063" duration="4522000" />
+      <workItem from="1682420217063" duration="11156000" />
+      <workItem from="1682589082010" duration="2278000" />
     </task>
     <servers />
   </component>
@@ -145,21 +155,5 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/atonInternship/DataStructure/Tree/AVLTreeTest.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/atonInternship/DataStructure/Tree/AVLTreeTest.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

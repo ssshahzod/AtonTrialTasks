@@ -2,9 +2,10 @@ package org.atonInternship.DataStructure.Tree;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.atonInternship.DataStructure.Tree.Node.TaskTreeNode;
 import org.junit.jupiter.api.Test;
 
-class TaskRecursiveTreeNodeTest {
+class TaskTreeInterfaceNodeTest {
 
     @Test
     void testSetValue() {

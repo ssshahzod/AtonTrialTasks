@@ -2,17 +2,20 @@ package org.atonInternship.DataStructure.Tree;
 
 
 import java.util.Comparator;
-import lombok.AllArgsConstructor;
+import org.atonInternship.DataStructure.Tree.Node.TreeNode;
 
 //for avl tree:
 //it takes O(log n) to find element in the worst case
 // and O(n) the worst case memory usage
-@AllArgsConstructor
-public class AVLTree<K> implements RecursiveTree<K> {
+public class AVLTree<K> implements TreeInterface<K> {
     private TreeNode<K> root = null;
     private Comparator<K> comparator;
 
     public AVLTree(Comparator<K> comparator){
+        this.comparator = comparator;
+    }
+    public AVLTree(TreeNode<K> root, Comparator<K> comparator){
+        this.root = root;
         this.comparator = comparator;
     }
 
