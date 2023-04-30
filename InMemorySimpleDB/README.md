@@ -20,5 +20,5 @@
 ```
   //download sources
   git clone https://github.com/ssshahzod/TrialTasks.git
-  cd TrialTasks
+  cd TrialTasks/InMemorySimpleDB
 ```
