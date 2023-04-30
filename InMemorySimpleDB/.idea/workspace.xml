@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="75cd5d2d-5d06-4d64-bb93-60f71de0b68e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Table/MyHashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Table/MyHashTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/AVLTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/atonInternship/DataStructure/Table/MyHashTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/atonInternship/DataStructure/Table/MyHashTableTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/atonInternship/DataStructure/Table/MyHashTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/atonInternship/DataStructure/Table/MyHashTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/atonInternship/DataStructure/Tree/AVLTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/atonInternship/DataStructure/Tree/AVLTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/atonInternship/DataStructure/Table/MyHashTableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/atonInternship/DataStructure/Table/MyHashTableTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="5832" />
+    <option name="totalTimeSeconds" value="6412" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -146,7 +140,9 @@
       <workItem from="1682249201787" duration="19000" />
       <workItem from="1682349474087" duration="6156000" />
       <workItem from="1682420217063" duration="11156000" />
-      <workItem from="1682589082010" duration="7227000" />
+      <workItem from="1682589082010" duration="7897000" />
+      <workItem from="1682665480192" duration="16000" />
+      <workItem from="1682871108924" duration="1261000" />
     </task>
     <servers />
   </component>
@@ -157,26 +153,5 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Table/MyHashTable.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/atonInternship/DataStructure/Table/MyHashTableTest.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Table/MyHashTable.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
