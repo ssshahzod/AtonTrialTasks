@@ -69,4 +69,24 @@ class SimpleDBTest {
 
         Assertions.assertNull(db.get(new SimpleDBObject(3L, null, null)));
     }
+
+    @Test
+    void testEdit(){
+        SimpleDBObject object1 = new SimpleDBObject(1L, "Alice", 1000.0);
+        SimpleDBObject object2 = new SimpleDBObject(2L, "Bob", 2000.0);
+
+        db.insertData(object1);
+        db.insertData(object2);
+
+        Assertions.assertTrue(db.get(new SimpleDBObject(1L, null, null)).contains(object1));
+        Assertions.assertTrue(db.get(new SimpleDBObject(null, "Bob", null)).contains(object2));
+
+        SimpleDBObject object3 = db.get(new SimpleDBObject(1L, null, null)).get(0);
+        db.remove(object3);
+
+        object3.setValue(3000.0);
+        db.insertData(object3);
+
+        Assertions.assertTrue(db.get(new SimpleDBObject(null, null, 3000.0)).contains(object3));
+    }
 }

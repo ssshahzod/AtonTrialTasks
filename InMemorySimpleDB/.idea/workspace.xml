@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="InMemorySimpleDB:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75cd5d2d-5d06-4d64-bb93-60f71de0b68e" name="Changes" comment="" />
+    <list default="true" id="75cd5d2d-5d06-4d64-bb93-60f71de0b68e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/atonInternship/Server/SimpleDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/atonInternship/Server/SimpleDBTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="198" />
+    <option name="totalTimeSeconds" value="1118" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,22 +47,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/cronion/Documents/AtonInternshipTasks/InMemorySimpleDB&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/home/cronion/Documents/AtonInternshipTasks/InMemorySimpleDB",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -65,22 +76,7 @@
       <recent name="org.atonInternship.DataStructure.Tree" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SimpleDBTest.testRemove">
-    <configuration name="MyHashTableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="InMemorySimpleDB" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.atonInternship.DataStructure.Table.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.atonInternship.DataStructure.Table" />
-      <option name="MAIN_CLASS_NAME" value="org.atonInternship.DataStructure.Table.MyHashTableTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SimpleDBTest.testEdit">
     <configuration name="SimpleDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InMemorySimpleDB" />
       <extension name="coverage">
@@ -92,6 +88,22 @@
       <option name="PACKAGE_NAME" value="org.atonInternship.Server" />
       <option name="MAIN_CLASS_NAME" value="org.atonInternship.Server.SimpleDBTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleDBTest.testEdit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InMemorySimpleDB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.atonInternship.Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.atonInternship.Server" />
+      <option name="MAIN_CLASS_NAME" value="org.atonInternship.Server.SimpleDBTest" />
+      <option name="METHOD_NAME" value="testEdit" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -146,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SimpleDBTest.testEdit" />
         <item itemvalue="JUnit.SimpleDBTest.testRemove" />
         <item itemvalue="JUnit.SimpleDBTest.testInsertData" />
         <item itemvalue="JUnit.SimpleDBTest.testGet" />
         <item itemvalue="JUnit.SimpleDBTest" />
-        <item itemvalue="JUnit.MyHashTableTest" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +190,7 @@
       <workItem from="1682665480192" duration="16000" />
       <workItem from="1682871108924" duration="1261000" />
       <workItem from="1682875155257" duration="11109000" />
-      <workItem from="1682928255313" duration="349000" />
+      <workItem from="1682928255313" duration="1656000" />
     </task>
     <servers />
   </component>
