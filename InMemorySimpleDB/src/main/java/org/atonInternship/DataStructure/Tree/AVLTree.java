@@ -9,7 +9,7 @@ import org.atonInternship.DataStructure.Tree.Node.TreeNode;
 
 public class AVLTree<K> implements TreeInterface<K> {
     private TreeNode<K> root = null;
-    private Comparator<K> comparator;
+    private final Comparator<K> comparator;
 
     public AVLTree(Comparator<K> comparator){
         this.comparator = comparator;
@@ -100,20 +100,6 @@ public class AVLTree<K> implements TreeInterface<K> {
         return root;
     }
 
-/*
-    public TreeNode<K> find(K key){
-        TreeNode<K> res = root;
-        while(res != null){
-            if(res.getValue().equals(key))
-                break;
-            if(comparator.compare(res.getValue(), key) <= 0)
-                res = res.getRight();
-            else
-                res = res.getLeft();
-        }
-        return res;
-    }
-*/
 
     public ArrayList<TreeNode<K>> find(K key){
         TreeNode<K> res = root;
@@ -132,6 +118,7 @@ public class AVLTree<K> implements TreeInterface<K> {
     public void delete(K key){
         root = delete(root, key);
     }
+
     private TreeNode<K> delete(TreeNode<K> node, K key){
         if(node == null){
             return null;
