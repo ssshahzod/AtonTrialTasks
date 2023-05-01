@@ -22,4 +22,8 @@
   //download sources
   git clone https://github.com/ssshahzod/TrialTasks.git
   cd TrialTasks/InMemorySimpleDB
+  mvn install //make sure that you have maven installed
+  
+  cd target
+  java -jar *.jar //run archive
 ```
