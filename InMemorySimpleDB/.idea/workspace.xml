@@ -4,24 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75cd5d2d-5d06-4d64-bb93-60f71de0b68e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Table/MyHashTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Table/MyHashTableInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/AVLTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/TreeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/TreeInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/Object/SimpleDBObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/Object/SimpleDBObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/Server/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/Server/DB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/Server/SimpleDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/Server/SimpleDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/atonInternship/DataStructure/Table/MyHashTableTest.java" beforeDir="false" />
-    </list>
+    <list default="true" id="75cd5d2d-5d06-4d64-bb93-60f71de0b68e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="7480" />
+    <option name="totalTimeSeconds" value="198" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -188,6 +178,7 @@
       <workItem from="1682665480192" duration="16000" />
       <workItem from="1682871108924" duration="1261000" />
       <workItem from="1682875155257" duration="11109000" />
+      <workItem from="1682928255313" duration="349000" />
     </task>
     <servers />
   </component>
