@@ -1,12 +1,12 @@
 package org.atonInternship.DataStructure.Tree;
 
 
+import com.sun.source.tree.Tree;
+import java.util.ArrayList;
 import java.util.Comparator;
 import org.atonInternship.DataStructure.Tree.Node.TreeNode;
 
-//for avl tree:
-//it takes O(log n) to find element in the worst case
-// and O(n) the worst case memory usage
+
 public class AVLTree<K> implements TreeInterface<K> {
     private TreeNode<K> root = null;
     private Comparator<K> comparator;
@@ -87,7 +87,7 @@ public class AVLTree<K> implements TreeInterface<K> {
         else if(comparator.compare(rootNode.getValue(), insertNode.getValue()) > 0){
             rootNode.setLeft(innerInsert(rootNode.getLeft(), insertNode));
         }
-        else if(comparator.compare(rootNode.getValue(), insertNode.getValue()) < 0){
+        else if(comparator.compare(rootNode.getValue(), insertNode.getValue()) <= 0){
             rootNode.setRight(innerInsert(rootNode.getRight(), insertNode));
         } else{
             return null;
@@ -100,17 +100,33 @@ public class AVLTree<K> implements TreeInterface<K> {
         return root;
     }
 
+/*
     public TreeNode<K> find(K key){
         TreeNode<K> res = root;
         while(res != null){
             if(res.getValue().equals(key))
                 break;
-            if(comparator.compare(res.getValue(), key) < 0)
+            if(comparator.compare(res.getValue(), key) <= 0)
                 res = res.getRight();
             else
                 res = res.getLeft();
         }
         return res;
+    }
+*/
+
+    public ArrayList<TreeNode<K>> find(K key){
+        TreeNode<K> res = root;
+        ArrayList<TreeNode<K>> result = new ArrayList<>();
+        while(res != null){
+            if(res.getValue().equals(key))
+                result.add(res);
+            if(comparator.compare(res.getValue(), key) <= 0)
+                res = res.getRight();
+            else
+                res = res.getLeft();
+        }
+        return result;
     }
 
     public void delete(K key){
