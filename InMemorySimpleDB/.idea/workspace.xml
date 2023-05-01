@@ -6,12 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="75cd5d2d-5d06-4d64-bb93-60f71de0b68e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Table/MyHashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Table/MyHashTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Table/MyHashTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Table/MyHashTableInterface.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/AVLTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/AVLTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/atonInternship/DataStructure/Table/MyHashTableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/atonInternship/DataStructure/Table/MyHashTableTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/atonInternship/DataStructure/Table/MyHashTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/atonInternship/DataStructure/Table/MyHashTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/atonInternship/DataStructure/Tree/AVLTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/atonInternship/DataStructure/Tree/AVLTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/atonInternship/DataStructure/Table/MyHashTableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/atonInternship/DataStructure/Table/MyHashTableTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/TreeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Tree/TreeInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/Object/SimpleDBObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/Object/SimpleDBObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/Server/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/Server/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/atonInternship/Server/SimpleDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/atonInternship/Server/SimpleDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/atonInternship/DataStructure/Table/MyHashTableTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,15 +21,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="5832" />
+    <option name="totalTimeSeconds" value="7480" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -68,26 +70,12 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.atonInternship.Server" />
       <recent name="org.atonInternship.DataStructure.Table" />
       <recent name="org.atonInternship.DataStructure.Tree" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyHashTableTest">
-    <configuration name="AVLTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="InMemorySimpleDB" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.atonInternship.DataStructure.Tree.Node.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.atonInternship.DataStructure.Tree" />
-      <option name="MAIN_CLASS_NAME" value="org.atonInternship.DataStructure.Tree.AVLTreeTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SimpleDBTest.testRemove">
     <configuration name="MyHashTableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InMemorySimpleDB" />
       <extension name="coverage">
@@ -103,26 +91,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TaskTreeInterfaceNodeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SimpleDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InMemorySimpleDB" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.atonInternship.DataStructure.Tree.Node.*" />
+          <option name="PATTERN" value="org.atonInternship.Server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.atonInternship.DataStructure.Tree" />
-      <option name="MAIN_CLASS_NAME" value="org.atonInternship.DataStructure.Tree.TaskTreeInterfaceNodeTest" />
+      <option name="PACKAGE_NAME" value="org.atonInternship.Server" />
+      <option name="MAIN_CLASS_NAME" value="org.atonInternship.Server.SimpleDBTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleDBTest.testGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InMemorySimpleDB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.atonInternship.Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.atonInternship.Server" />
+      <option name="MAIN_CLASS_NAME" value="org.atonInternship.Server.SimpleDBTest" />
+      <option name="METHOD_NAME" value="testGet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleDBTest.testInsertData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InMemorySimpleDB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.atonInternship.Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.atonInternship.Server" />
+      <option name="MAIN_CLASS_NAME" value="org.atonInternship.Server.SimpleDBTest" />
+      <option name="METHOD_NAME" value="testInsertData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleDBTest.testRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InMemorySimpleDB" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.atonInternship.Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.atonInternship.Server" />
+      <option name="MAIN_CLASS_NAME" value="org.atonInternship.Server.SimpleDBTest" />
+      <option name="METHOD_NAME" value="testRemove" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SimpleDBTest.testRemove" />
+        <item itemvalue="JUnit.SimpleDBTest.testInsertData" />
+        <item itemvalue="JUnit.SimpleDBTest.testGet" />
+        <item itemvalue="JUnit.SimpleDBTest" />
         <item itemvalue="JUnit.MyHashTableTest" />
-        <item itemvalue="JUnit.AVLTreeTest" />
-        <item itemvalue="JUnit.TaskTreeInterfaceNodeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -146,7 +184,10 @@
       <workItem from="1682249201787" duration="19000" />
       <workItem from="1682349474087" duration="6156000" />
       <workItem from="1682420217063" duration="11156000" />
-      <workItem from="1682589082010" duration="7227000" />
+      <workItem from="1682589082010" duration="7897000" />
+      <workItem from="1682665480192" duration="16000" />
+      <workItem from="1682871108924" duration="1261000" />
+      <workItem from="1682875155257" duration="11109000" />
     </task>
     <servers />
   </component>
@@ -157,26 +198,5 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Table/MyHashTable.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/atonInternship/DataStructure/Table/MyHashTableTest.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/atonInternship/DataStructure/Table/MyHashTable.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

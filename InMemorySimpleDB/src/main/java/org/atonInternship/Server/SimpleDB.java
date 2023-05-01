@@ -1,21 +1,26 @@
 package org.atonInternship.Server;
 
-import org.atonInternship.DataStructure.Table.MyHashTable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import org.atonInternship.DataStructure.Tree.AVLTree;
 import org.atonInternship.DataStructure.Tree.Node.TaskTreeNode;
 import org.atonInternship.Object.SimpleDBObject;
 
 public class SimpleDB implements DB<SimpleDBObject> {
     private int size = 0;
-    private final int tableSize = 20;
 
     //strNode -> lngNode -> dblNode
-    private final MyHashTable<String, TaskTreeNode<String>> tableOfNames = new MyHashTable<>(String::compareTo, tableSize);
-    private final MyHashTable<Long, TaskTreeNode<Long>> tableOfAccounts = new MyHashTable<>(Long::compareTo, tableSize);
-    private final MyHashTable<Double, TaskTreeNode<Double>> tableOfValues = new MyHashTable<>(Double::compareTo, tableSize);
+    private final AVLTree<String> treeOfNames = new AVLTree<>(String::compareTo);
+    private final AVLTree<Long> treeOfAccounts = new AVLTree<>(Long::compareTo);
+    private final AVLTree<Double> treeOfValues = new AVLTree<>(Double::compareTo);
 
     public SimpleDB(){}
     @Override
     public void insertData(final SimpleDBObject data) {
+        var tmp = get(data);
+        if(tmp != null && tmp.contains(data))
+            return;
         size++;
         var strData = new TaskTreeNode<>(data.getName());
         var lngData = new TaskTreeNode<>(data.getAccount());
@@ -25,59 +30,85 @@ public class SimpleDB implements DB<SimpleDBObject> {
         lngData.setLink(dblData);
         dblData.setLink(strData);
 
-        tableOfNames.insert(data.getName(), strData);
-        tableOfAccounts.insert(data.getAccount(), lngData);
-        tableOfValues.insert(data.getValue(), dblData);
+        treeOfNames.insert(strData);
+        treeOfAccounts.insert(lngData);
+        treeOfValues.insert(dblData);
     }
 
-    private void getByName(final SimpleDBObject object){
-        TaskTreeNode<String> res = tableOfNames.find(object.getName());
-        object.setAccount((Long) res.getLink().getValue());
-        object.setValue((Double) res.getLink().getLink().getValue());
+    private ArrayList<SimpleDBObject> getByName(final SimpleDBObject object){
+        List<TaskTreeNode<String>> res = treeOfNames.find(object.getName())
+                .stream()
+                .map(node -> ((TaskTreeNode<String>) node))
+                .toList();
+        if(res.size() == 0)
+            return null;
+        var result = new ArrayList<SimpleDBObject>();
+
+        res.forEach(r -> result.add(new SimpleDBObject(
+                (Long) r.getLink().getValue(),
+                 r.getValue(),
+                (Double) r.getLink().getLink().getValue())));
+        return result;
     }
-    private void getByAccount(final SimpleDBObject object){
-        TaskTreeNode<Long> res = tableOfAccounts.find(object.getAccount());
-        object.setValue((Double) res.getLink().getValue());
-        object.setName((String) res.getLink().getLink().getValue());
+    private ArrayList<SimpleDBObject> getByAccount(final SimpleDBObject object){
+        List<TaskTreeNode<Long>> res = treeOfAccounts.find(object.getAccount())
+                .stream()
+                .map(node -> ((TaskTreeNode<Long>) node))
+                .toList();
+        if(res.isEmpty())
+            return null;
+        var result = new ArrayList<SimpleDBObject>();
+
+        res.forEach(r -> result.add(new SimpleDBObject(
+                r.getValue(),
+                (String) r.getLink().getLink().getValue(),
+                (Double) r.getLink().getValue())));
+        return result;
     }
-    private void getByValue(final SimpleDBObject object){
-        TaskTreeNode<Double> res = tableOfValues.find(object.getValue());
-        object.setName((String) res.getLink().getValue());
-        object.setAccount((Long) res.getLink().getLink().getValue());
+    private ArrayList<SimpleDBObject> getByValue(final SimpleDBObject object){
+        List<TaskTreeNode<Double>> res = treeOfValues.find(object.getValue())
+                .stream()
+                .map(node -> ((TaskTreeNode<Double>) node))
+                .toList();
+        if(res.isEmpty())
+            return null;
+        var result = new ArrayList<SimpleDBObject>();
+
+        res.forEach(r -> result.add(new SimpleDBObject(
+                (Long) r.getLink().getLink().getValue(),
+                (String) r.getLink().getValue(),
+                r.getValue())));
+        return result;
     }
 
     @Override
-    public SimpleDBObject get(final SimpleDBObject data) {
-        SimpleDBObject res = new SimpleDBObject();
+    public List<SimpleDBObject> get(final SimpleDBObject data) {
+        ArrayList<SimpleDBObject> res;
         if(data.getName() != null){
-            getByName(res);
+            res = getByName(data);
         } else if(data.getValue() != null){
-            getByValue(res);
+            res = getByValue(data);
         } else{
-            getByAccount(res);
+            res = getByAccount(data);
         }
         return res;
     }
 
-    private void removeByName(final SimpleDBObject data){
 
-    }
-
-    private void removeByAccount(final SimpleDBObject data){
-
-    }
-
-    private void removeByValue(final SimpleDBObject data){
-
-    }
 
     @Override
-    public void remove(final SimpleDBObject data){
+    public int remove(final SimpleDBObject data){
         if(size == 0){
-            return;
+            return 1;
         }
         var tmp = get(data);
-        tableOfNames.delete(data.getName());
-
+        if(tmp == null)
+            return 1;
+        if(tmp.size() > 1)
+            return 2;
+        treeOfNames.delete(tmp.get(0).getName());
+        treeOfValues.delete(tmp.get(0).getValue());
+        treeOfAccounts.delete(tmp.get(0).getAccount());
+        return 0;
     }
 }

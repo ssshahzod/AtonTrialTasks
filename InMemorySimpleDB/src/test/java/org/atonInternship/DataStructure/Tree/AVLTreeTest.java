@@ -19,7 +19,6 @@ class AVLTreeTest {
 
     @Test
     public void testInsertBalanced() {
-        // Insert nodes in balanced order
         for (int i = 1; i <= 10; i++) {
             TreeNode<Integer> node = new TaskTreeNode<>(i);
             tree.insert(node);
@@ -29,10 +28,9 @@ class AVLTreeTest {
 
     @Test
     public void testInsertRandom() {
-        // Insert nodes in random order
         Integer[] values = {5, 3, 1, 4, 7, 9, 6, 2, 8, 10};
-        for (int i = 0; i < values.length; i++) {
-            TreeNode<Integer> node = new TaskTreeNode<>(values[i]);
+        for (final Integer value : values) {
+            TreeNode<Integer> node = new TaskTreeNode<>(value);
             tree.insert(node);
             Assertions.assertTrue(tree.isBalanced());
         }
@@ -40,14 +38,12 @@ class AVLTreeTest {
 
     @Test
     public void testDelete() {
-        // Insert nodes
         Integer[] values = {5, 3, 1, 4, 7, 9, 6, 2, 8, 10};
-        for (int i = 0; i < values.length; i++) {
-            TreeNode<Integer> node = new TaskTreeNode<>(values[i]);
+        for (final Integer value : values) {
+            TreeNode<Integer> node = new TaskTreeNode<>(value);
             tree.insert(node);
         }
 
-        // Delete some nodes
         tree.delete(2);
         Assertions.assertTrue(tree.isBalanced());
         tree.delete(4);
@@ -58,16 +54,14 @@ class AVLTreeTest {
 
     @Test
     public void testDeleteAll() {
-        // Insert nodes
         Integer[] values = {5, 3, 1, 4, 7, 9, 6, 2, 8, 10};
-        for (int i = 0; i < values.length; i++) {
-            TreeNode<Integer> node = new TaskTreeNode<>(values[i]);
+        for (final Integer value : values) {
+            TreeNode<Integer> node = new TaskTreeNode<>(value);
             tree.insert(node);
         }
 
-        // Delete all nodes
-        for (int i = 0; i < values.length; i++) {
-            tree.delete(values[i]);
+        for (final Integer value : values) {
+            tree.delete(value);
             Assertions.assertTrue(tree.isBalanced());
         }
         Assertions.assertNull(tree.getRoot());

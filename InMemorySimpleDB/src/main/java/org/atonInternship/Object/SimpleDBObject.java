@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.Objects;
 
 
 public class SimpleDBObject implements DBObject {
@@ -37,6 +38,7 @@ public class SimpleDBObject implements DBObject {
         this.value = value;
     }
 
+
     @Override
     public void readData(InputStream inputStream){
         String[] fields = {"account: ", "name: ", "value: "};
@@ -55,6 +57,16 @@ public class SimpleDBObject implements DBObject {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public boolean equals(final Object o) {
+        if (this == o) return true;
+        if (!(o instanceof final SimpleDBObject dbObject)) return false;
+        if (!Objects.equals(account, dbObject.account)) return false;
+        if (!Objects.equals(name, dbObject.name)) return false;
+        return Objects.equals(value, dbObject.value);
+    }
+
 
     @Override
     public String toString(){
