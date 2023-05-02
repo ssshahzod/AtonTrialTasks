@@ -46,7 +46,7 @@ public class SimpleDBObject implements DBObject {
         try{
             String[] line = new String[3];
             for(int i = 0; i <  3; i++){
-                System.out.println("Enter " + fields[i]);
+                System.out.print("Enter " + fields[i]);
                 line[i] = bufferedReader.readLine();
             }
             this.account = Long.decode(line[0]);
