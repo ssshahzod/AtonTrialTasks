@@ -3,6 +3,8 @@ package org.atonInternship;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 import org.atonInternship.Commands.Commands;
 import org.atonInternship.Object.SimpleDBObject;
 import org.atonInternship.Server.DB;
@@ -34,7 +36,7 @@ public class Main {
                         var entity = new SimpleDBObject();
                         entity.readData(System.in);
                         if (dataBase.insertData(entity) == 0)
-                            System.out.println("New entry: \n" + entity + "was successfully added! \n");
+                            System.out.println("\nNew entry: \n" + entity + "was successfully added! \n");
                         else
                             System.out.println("Entry already exists!\n");
                     }
@@ -51,7 +53,7 @@ public class Main {
                     case edit -> {
                         var tmp = getOne();
                         if(tmp != null){
-                            System.out.println("Insert new values: \n");
+                            System.out.println("Insert updated values: \n");
                             var newEntity = new SimpleDBObject();
                             newEntity.readData(System.in);
                             dataBase.remove(tmp);
@@ -74,15 +76,15 @@ public class Main {
     }
 
     public static SimpleDBObject getOne(){
+        System.out.println("\nChoose how to search entity:");
         var tmp = readOneField();
-        var res = dataBase.get(readOneField());
+        var res = dataBase.get(tmp);
         if(res == null)
             System.out.println("No such entries!\n");
         else{
-            while(res != null && res.size() > 1) {
-                System.out.println("Several entries with such value were found!");
-                readOtherFields(tmp);
-                res = dataBase.get(tmp);
+            while(res.size() > 1) {
+                System.out.println("\nSeveral entries with such value were found! Please provide additional information!");
+                readOtherFields(tmp, res);
             }
         }
         if(res == null)
@@ -116,20 +118,20 @@ public class Main {
         return res;
     }
 
-    public static void readOtherFields(SimpleDBObject object){
-        int sum = 0;
-        sum += object.getAccount() != null ? 1 : 0;
-        sum += object.getName() != null ? 2 : 0;
-        sum += object.getValue() != null ? 4 : 0;
-
+    public static void readOtherFields(SimpleDBObject object, List<SimpleDBObject> list){
+        int sum = object.fillness();
         if(sum == 1 || sum == 4 || sum == 5){
             readName(object);
+            list.removeIf(object1 -> !object1.getName().equals(object.getName()));
         } else if(sum == 2 || sum == 6){
             readAccount(object);
+            list.removeIf(object1 -> !object1.getAccount().equals(object.getAccount()));
         } else if(sum == 3){
             readValue(object);
+            list.removeIf(object1 -> !object1.getValue().equals(object.getValue()));
         }
 
+        return;
     }
 
     public static void readName(SimpleDBObject object){

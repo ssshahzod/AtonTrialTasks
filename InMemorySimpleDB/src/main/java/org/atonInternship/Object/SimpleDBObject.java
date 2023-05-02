@@ -38,6 +38,13 @@ public class SimpleDBObject implements DBObject {
         this.value = value;
     }
 
+    public int fillness() {
+        int sum = 0;
+        sum += this.getAccount() != null ? 1 : 0;
+        sum += this.getName() != null ? 2 : 0;
+        sum += this.getValue() != null ? 4 : 0;
+        return sum;
+    }
 
     @Override
     public void readData(InputStream inputStream){

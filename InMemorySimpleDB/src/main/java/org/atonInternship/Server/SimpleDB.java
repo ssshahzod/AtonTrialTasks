@@ -95,6 +95,22 @@ public class SimpleDB implements DB<SimpleDBObject> {
         return res;
     }
 
+    private List<SimpleDBObject> getOne(final SimpleDBObject data){
+        var list = get(data);
+        int sum = data.fillness();
+
+        if(sum == 1 || sum == 4 || sum == 5 || sum == 7){
+            list.removeIf(object1 -> !object1.getName().equals(data.getName()));
+        }
+        if(sum == 2 || sum == 6 || sum == 7){
+            list.removeIf(object1 -> !object1.getAccount().equals(data.getAccount()));
+        }
+        if(sum == 3 || sum == 7){
+            list.removeIf(object1 -> !object1.getValue().equals(data.getValue()));
+        }
+        return list;
+    }
+
 
 
     @Override
@@ -102,7 +118,7 @@ public class SimpleDB implements DB<SimpleDBObject> {
         if(size == 0){
             return 1;
         }
-        var tmp = get(data);
+        var tmp = getOne(data);
         if(tmp == null)
             return 1;
         if(tmp.size() > 1)
