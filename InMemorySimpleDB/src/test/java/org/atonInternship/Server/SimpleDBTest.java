@@ -53,6 +53,11 @@ class SimpleDBTest {
 
         var result = db.get(toRemove);
         Assertions.assertNull(result);
+
+        var tmp = db.get(new SimpleDBObject(2L, null, null));
+
+        Assertions.assertEquals(1, tmp.size());
+        Assertions.assertTrue(tmp.contains(object3));
     }
 
     @Test

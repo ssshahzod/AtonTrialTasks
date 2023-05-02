@@ -17,10 +17,10 @@ public class SimpleDB implements DB<SimpleDBObject> {
 
     public SimpleDB(){}
     @Override
-    public void insertData(final SimpleDBObject data) {
+    public int insertData(final SimpleDBObject data) {
         var tmp = get(data);
         if(tmp != null && tmp.contains(data))
-            return;
+            return 1;
         size++;
         var strData = new TaskTreeNode<>(data.getName());
         var lngData = new TaskTreeNode<>(data.getAccount());
@@ -33,6 +33,7 @@ public class SimpleDB implements DB<SimpleDBObject> {
         treeOfNames.insert(strData);
         treeOfAccounts.insert(lngData);
         treeOfValues.insert(dblData);
+        return 0;
     }
 
     private ArrayList<SimpleDBObject> getByName(final SimpleDBObject object){

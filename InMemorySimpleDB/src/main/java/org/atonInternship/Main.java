@@ -1,14 +1,8 @@
 package org.atonInternship;
 
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.valueOf;
-
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Objects;
 import org.atonInternship.Commands.Commands;
 import org.atonInternship.Object.SimpleDBObject;
 import org.atonInternship.Server.DB;
@@ -27,35 +21,48 @@ public class Main {
                 //delete byAccount/byName/byValue account/name/value
                 System.out.print("""
                                 0. Add new entity\s
-                                1. Edit existing entity\s
-                                2. Delete entity\s
+                                1. Get entry\s
+                                2. Edit existing entity\s
+                                3. Delete entity\s
                                 Input number: """);
                 String input = bufferedReader.readLine();
                 int choice = Integer.parseInt(input);
                 Commands commands = Commands.values()[choice];
 
                 switch (commands) {
-                    case add: {
+                    case add -> {
                         var entity = new SimpleDBObject();
                         entity.readData(System.in);
-                        dataBase.insertData(entity);
-                        System.out.println("New entry: " + entity + " was successfully added!");
+                        if (dataBase.insertData(entity) == 0)
+                            System.out.println("New entry: \n" + entity + "was successfully added! \n");
+                        else
+                            System.out.println("Entry already exists!\n");
                     }
-                    case get:{
+                    case get -> {
                         var tmp = readOneField();
                         var res = dataBase.get(tmp);
-                        if(res == null)
+                        if (res == null)
                             System.out.println("No such entry in database!");
-                        else if (res.size() > 1) {
-                            System.out.println("Several entries were found! ");
+                        else {
+                            System.out.println("\nFound entries: \n");
+                            res.forEach(System.out::println);
                         }
                     }
-                    case edit: {
-                        var tmp = dataBase.get(readOneField());
-                        System.out.println("Several entries with");
-                    }
-                    case delete: {
+                    case edit -> {
+                        var tmp = getOne();
+                        if(tmp != null){
+                            System.out.println("Insert new values: \n");
+                            var newEntity = new SimpleDBObject();
+                            newEntity.readData(System.in);
+                            dataBase.remove(tmp);
+                            dataBase.insertData(newEntity);
+                        }
 
+                    }
+                    case delete -> {
+                        var tmp = getOne();
+                        if(tmp != null)
+                            dataBase.remove(tmp);
                     }
                 }
             }
@@ -64,6 +71,23 @@ public class Main {
             System.out.println("Error while reading input data! \n");
             e.printStackTrace();
         }
+    }
+
+    public static SimpleDBObject getOne(){
+        var tmp = readOneField();
+        var res = dataBase.get(readOneField());
+        if(res == null)
+            System.out.println("No such entries!\n");
+        else{
+            while(res != null && res.size() > 1) {
+                System.out.println("Several entries with such value were found!");
+                readOtherFields(tmp);
+                res = dataBase.get(tmp);
+            }
+        }
+        if(res == null)
+            return null;
+        return res.get(0);
     }
 
     public static SimpleDBObject readOneField(){
@@ -79,17 +103,11 @@ public class Main {
             String input = bufferedReader.readLine();
             int choice = Integer.parseInt(input);
             if(choice == 0){
-                System.out.print("Input name: ");
-                input = bufferedReader.readLine();
-                res.setName(input);
+                readName(res);
             } else if(choice == 1){
-                System.out.print("Input account: ");
-                input = bufferedReader.readLine();
-                res.setAccount(Long.parseLong(input));
+                readAccount(res);
             } else if(choice == 2){
-                System.out.print("Input value: ");
-                input = bufferedReader.readLine();
-                res.setValue(Double.valueOf(input));
+                readValue(res);
             }
         } catch (IOException e){
             e.printStackTrace();
@@ -98,27 +116,20 @@ public class Main {
         return res;
     }
 
-    public static void readOtherFields(int amount, SimpleDBObject object){
-        var res = new SimpleDBObject();
-        var bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        try {
-            String input;
-            if(object.getName() != null){
-                if(object.getAccount() != null){
+    public static void readOtherFields(SimpleDBObject object){
+        int sum = 0;
+        sum += object.getAccount() != null ? 1 : 0;
+        sum += object.getName() != null ? 2 : 0;
+        sum += object.getValue() != null ? 4 : 0;
 
-                }
-            } else if(object.getValue() != null){
-                System.out.print("Input name: ");
-                input = bufferedReader.readLine();
-                object.setName(input);
-            } else if(object.getAccount() != null){
-                System.out.print("Input value: ");
-                input = bufferedReader.readLine();
-                object.setValue(Double.valueOf(input));
-            }
-        } catch (IOException e){
-            e.printStackTrace();
+        if(sum == 1 || sum == 4 || sum == 5){
+            readName(object);
+        } else if(sum == 2 || sum == 6){
+            readAccount(object);
+        } else if(sum == 3){
+            readValue(object);
         }
+
     }
 
     public static void readName(SimpleDBObject object){
