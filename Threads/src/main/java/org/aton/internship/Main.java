@@ -15,11 +15,10 @@ public class Main {
         CharacterThread phoebe = new CharacterThread("Phoebe");
         CharacterThread rachel = new CharacterThread("Rachel");
         CharacterThread ross = new CharacterThread("Ross");
-        System.out.println("\nType Exit to finish \n");
 
         try {
             String line = bufferedReader.readLine();
-            while(!line.equals("Exit")){
+            while(!line.equals("Exit\n")){
                 chandler.run(line);
                 joey.run(line);
                 monica.run(line);
