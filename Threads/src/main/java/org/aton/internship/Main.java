@@ -15,6 +15,7 @@ public class Main {
         CharacterThread phoebe = new CharacterThread("Phoebe");
         CharacterThread rachel = new CharacterThread("Rachel");
         CharacterThread ross = new CharacterThread("Ross");
+        System.out.println("To exit write 'Exit' \n Enter sitcom: ");
 
         try {
             String line = bufferedReader.readLine();
