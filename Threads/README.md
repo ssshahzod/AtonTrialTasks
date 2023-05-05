@@ -1,6 +1,15 @@
 ## Здесь решения для двух заданий 
 
-- Код соответствует решению задания 1.
+- Код соответствует решению задания 1. Сборку и запуск можно осуществить следующим способом:
+``` 
+  git clone https://github.com/ssshahzod/TrialTasks.git
+  cd TrialTasks/Threads
+  mvn install //make sure that you have maven installed
+  
+  cd target
+  java -jar *.jar //run archive
+```
+
 - Решение задания 2 представлено в текстовом виде, и следует дальше в этом файле.
 
 
